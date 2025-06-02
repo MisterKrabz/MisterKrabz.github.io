@@ -1,0 +1,150 @@
+
+
+.contact-section {
+    display: flex;
+    align-items: center; /* Vertically align items, try 'flex-start' if you prefer top alignment */
+    gap: 50px; /* Space between text and form */
+    padding: 40px 50px;
+    max-width: 1200px; /* Max width for the whole section */
+    margin: 40px auto; /* Center the section on the page and add some top/bottom margin */
+    background-color: white; /* Ensure section background if body is different */
+}
+
+/* Left Text Content */
+.contact-text-content {
+    flex: 1; /* Takes up available space */
+}
+
+.contact-text-content .main-heading {
+    font-family: 'Anton', sans-serif; /* Example of a very bold font, ensure it's loaded or use a fallback */
+    font-size: 5.5rem; /* Adjust size as needed */
+    font-weight: 900; /* Or use font's specific bold weight */
+    line-height: 1.1;
+    color: black;
+    margin-bottom: 20px;
+    text-transform: uppercase; /* As it appears in the image */
+}
+
+.contact-text-content .sub-heading {
+    font-family: 'Oswald', sans-serif; /* Example font */
+    font-size: 3.5rem; /* Adjust size */
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase; /* As it appears in the image */
+}
+
+/* Right Form Container */
+.contact-form-container {
+    flex: 1; /* Takes up available space */
+    max-width: 500px; /* Max width for the form itself */
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #222; /* Slightly darker label text */
+    font-weight: 600;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid black;
+    background-color: white;
+    font-size: 1rem;
+    font-family: inherit; /* Use the body's font */
+    border-radius: 0; /* Sharp corners as in image */
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888; /* Lighter placeholder text */
+}
+
+.form-group textarea {
+    resize: vertical; /* Allow vertical resizing */
+    min-height: 120px; /* Minimum height for textarea */
+}
+
+/* Button Group - for aligning the button */
+.form-button-group {
+    text-align: right; /* Aligns button to the right */
+}
+
+.send-button {
+    background-color: #FFD700; /* Yellow background */
+    color: black;
+    border: 2px solid black;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+    border-radius: 4px; /* Slight rounding for the button */
+    box-shadow: 3px 3px 0px black; /* Hard offset shadow */
+    transition: transform 0.1s ease-out, box-shadow 0.1s ease-out;
+}
+
+.send-button:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px black;
+}
+
+.send-button:active {
+    transform: translate(0px, 0px);
+    box-shadow: 1px 1px 0px black;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .contact-section {
+        flex-direction: column;
+        align-items: stretch; /* Make items take full width in column */
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .contact-text-content {
+        text-align: center; /* Center the text on smaller screens */
+        margin-bottom: 20px;
+    }
+
+    .contact-text-content .main-heading {
+        font-size: 3.5rem; /* Adjust font for mobile */
+    }
+
+    .contact-text-content .sub-heading {
+        font-size: 2.5rem; /* Adjust font for mobile */
+    }
+
+    .contact-form-container {
+        max-width: 100%; /* Form takes full width */
+    }
+
+    .form-button-group {
+        text-align: center; /* Center the button on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-text-content .main-heading {
+        font-size: 2.8rem;
+    }
+
+    .contact-text-content .sub-heading {
+        font-size: 2rem;
+    }
+
+    .send-button {
+        width: 100%; /* Make button full width on very small screens */
+        padding: 12px 20px;
+    }
+}

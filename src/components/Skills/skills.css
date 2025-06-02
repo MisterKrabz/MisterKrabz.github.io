@@ -1,0 +1,174 @@
+.skills-section {
+    padding: 30px 0px; /* Add some top/bottom padding to the section if needed */
+    /* The main background is on the body, or set it here if preferred */
+}
+
+/* Title Styling */
+.skills-title-container {
+    display: inline-block;
+    background-color: red; /* Yellow background for the tab */
+    padding: 10px 25px;
+    border: 7px solid black;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 40px; /* Indent from the left */
+    position: relative;
+    z-index: 1;
+    margin-bottom: -2px; /* Overlap with the content area's top border */
+}
+
+.skills-title {
+    font-size: 2.2em; /* Adjust as needed */
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.skills-title .title-icon {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Skills Content Area (below title) */
+.skills-content-area {
+    background-color: red; /* Match body/section background */
+    border-top: 2px solid black; /* Line under the title tab */
+    padding: 100px 100px 100px 100px; /* Padding for the grid container */
+}
+
+/* Skills Grid Layout */
+.skills-grid {
+    display: grid;
+    /* Adjust minmax values for desired card size and responsiveness */
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 75px; /* Space between cards */
+    justify-content: center;
+}
+
+/* Individual Skill Card Styling */
+.skill-card {
+    background-color: #FFD700; /* Yellow background for cards */
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 20px 15px;
+    text-align: center;
+    /* Hard offset shadow as seen in the image */
+    box-shadow: 5px 5px 0px #000000;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* For hover effect */
+}
+
+.skill-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 7px 7px 0px #000000;
+}
+
+.skill-icon-container {
+    height: 70px; /* Fixed height for icon area */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Ensure icons don't overflow */
+}
+
+.skill-icon-container img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.skill-name {
+    font-size: 1em;
+    color: black;
+    font-weight: bold;
+}
+
+/* Custom icon styles to mimic image (examples) */
+.js-icon-custom {
+    background-color: black;
+    color: #FFD700; /* Yellow text */
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 4px; /* Slight rounding if needed */
+}
+
+.next-icon-custom {
+    background-color: black;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* Circular */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Arial Black', sans-serif; /* A font that might give a thicker 'N' */
+}
+
+.ts-icon-custom {
+    background-color: #007ACC; /* TypeScript blue */
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8em;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+
+/* Responsive Adjustments for the grid */
+@media (max-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+    }
+    .skills-title-container {
+        margin-left: 20px;
+        padding: 8px 20px;
+    }
+    .skills-title {
+        font-size: 1.8em;
+    }
+    .skills-content-area {
+        padding: 30px 15px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 15px;
+    }
+    .skill-card {
+        padding: 15px 10px;
+        box-shadow: 3px 3px 0px #000000;
+    }
+    .skill-card:hover {
+        transform: translate(-1px, -1px);
+        box-shadow: 4px 4px 0px #000000;
+    }
+    .skill-icon-container {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .skill-name {
+        font-size: 0.9em;
+    }
+    .js-icon-custom, .next-icon-custom, .ts-icon-custom {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5em;
+    }
+}

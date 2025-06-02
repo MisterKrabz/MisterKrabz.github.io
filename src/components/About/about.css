@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+; /* Fallback background for outside the section */
+    color: #333;
+}
+
+.about-section {
+
+    min-height: 60vh; /* Adjust as needed */
+}
+
+/* Title Styling */
+.about-title-container {
+    display: inline-block; /* Allows background to fit content */
+    background-color: red; /* Same as section, or slightly different for tab effect */
+    padding: 10px 25px;
+    border: 6px solid black;
+    border-bottom: none; /* To make it look like a tab connected to content below */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 30px; /* Indent from the left */
+    position: relative;
+    z-index: 1; /* Ensures it's above the content area's top border */
+    margin-bottom: -2px; /* Overlap with the content area's top border */
+}
+
+.about-title {
+    font-size: 2.5em;
+    color: black;
+    display: flex; /* For icon alignment if you use one */
+    align-items: center;
+}
+
+.about-title i { 
+    margin-right: 10px;
+}
+
+/* Content Area (below title) */
+.about-content-area {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    gap: 40px; /* Space between text box and image */
+    padding: 40px 30px 30px 40px; /* Add padding to the content wrapper */
+    background-color: red; /* Ensure this area also has the yellow background */
+    border-top: 2px solid black; /* Line under the title tab */
+    position: relative; /* To contain absolutely positioned elements if any */
+}
+
+/* Left Text Box */
+.about-text-box {
+    background-color: #1E1E1E; /* Dark background */
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    flex: 3; /* Text box takes more space */
+    max-width: 650px; /* Max width for readability */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-text-box p {
+    margin-bottom: 1em;
+}
+
+.about-text-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* Right Image Container */
+.about-image-container {
+    flex: 1.5; /* Image container takes less space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px; /* Adjust vertical alignment if needed */
+}
+
+.profile-image {
+    width: 250px; /* Adjust size */
+    height: 250px; /* Ensure it's square for a perfect circle */
+    border-radius: 50%; /* Makes the image circular */
+    object-fit: cover; /* Important for image aspect ratio */
+    border: 6px solid black; /* Black border around the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+    .about-content-area {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items when stacked */
+        padding: 30px 15px;
+    }
+
+    .about-text-box {
+        width: 100%;
+        max-width: 500px; /* Adjust max-width for smaller screens */
+        margin-bottom: 30px; /* Space between text and image when stacked */
+        flex-basis: auto; /* Reset flex-basis */
+    }
+
+    .about-image-container {
+        width: auto;
+        flex-basis: auto; /* Reset flex-basis */
+    }
+
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+
+    .about-title-container {
+        margin-left: 15px;
+    }
+
+    .about-title {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-title-container {
+        padding: 8px 15px;
+        margin-left: 10px;
+    }
+    .about-title {
+        font-size: 1.8em;
+    }
+    .about-text-box {
+        padding: 20px;
+    }
+    .profile-image {
+        width: 160px;
+        height: 160px;
+        border-width: 4px;
+    }
+}
