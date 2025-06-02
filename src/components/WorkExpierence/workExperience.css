@@ -1,0 +1,44 @@
+.work-experience-title-container {
+    display: inline-block;
+    background-color: red; /* Yellow background for the tab */
+    padding: 10px 25px;
+    border: 7px solid black;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 40px; /* Indent from the left */
+    position: relative;
+    z-index: 1;
+    margin-bottom: -2px; /* Overlap with the content area's top border */
+}
+
+.work-experience-title {
+    font-size: 2.2em; /* Adjust as needed */
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.work-experience-content-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: red;
+}
+
+.work-experience-card{
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px 20px;
+    box-shadow: 8px 8px 0px black;
+    margin: 2rem;
+    background-color: #FFD700; /* Yellow background for cards */
+    color: black;
+}
+
+.work-experience-card:hover{
+    box-shadow: 12px 12px 0px black;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}

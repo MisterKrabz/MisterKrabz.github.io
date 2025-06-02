@@ -56,7 +56,7 @@
     text-align: center;
     /* Hard offset shadow as seen in the image */
     box-shadow: 5px 5px 0px #000000;
-    transition: transform 0.2s ease, box-shadow 0.2s ease; /* For hover effect */
+    transition: transform 0.5s ease, box-shadow 0.5s ease; /* For hover effect */
 }
 
 .skill-card:hover {

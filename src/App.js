@@ -3,7 +3,7 @@ import Navbar from './components/navbar/navbar';
 import Intro from './components/Intro/intro';
 import About from './components/About/about';
 import Skills from './components/Skills/skills';
-import WorkExpierence from './components/WorkExpierence/workExpierence';
+import WorkExperience from './components/WorkExpierence/workExperience';
 import Courses from './components/Courses/courses';
 import Contact from './components/Contact/contact';
 
@@ -14,6 +14,8 @@ function App() {
       <Intro/>
       <About/>
       <Skills/>
+      <Courses/>
+      <WorkExperience/>
       <Contact/>
     </div>
   );

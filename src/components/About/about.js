@@ -4,18 +4,18 @@ import profilePic from '../../assets/profilePic.jpg';
 
 const About = () => {
     return(
-        <section class="about-section">
-            <div class="about-title-container">
-                <h2 class="about-title">
+        <section className="about-section">
+            <div className="about-title-container">
+                <h2 className="about-title">
                     &#128100; About </h2>
             </div>
 
 
-            <div class="about-content-area">
-                <div class="about-image-container">
+            <div className="about-content-area">
+                <div className="about-image-container">
                     <img src={profilePic} alt="Profile Picture" class="profile-image"/>
                 </div>
-                <div class="about-text-box">
+                <div className="about-text-box">
                     <p>
                     I am a college student at the university of Wisconsin-Madison, studing 
                     Computer Science and Data Science. I have had an appreciation for the 
@@ -24,12 +24,12 @@ const About = () => {
                     <br/><br/>
                     I enjoy swimming in my free time and have been a competitive swimmer 
                     throughout high school. During the 2023 Missouri State Swim Meet, I ranked: 
+                    </p>
                     <ul>
                         <li>7st in the 200 Freestyle relay</li>
                         <li>21nd in the 100 Breaststroke</li>
                         <li>33rd in the 100 Freestyle</li>
                     </ul>
-                    </p>
                 </div>
             </div>
         </section>

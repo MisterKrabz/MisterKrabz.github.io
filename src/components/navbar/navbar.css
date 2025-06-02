@@ -3,14 +3,11 @@
     width: 100vw;
     margin: 0 auto;
     padding: 1rem 2rem;
-    max-width: 75rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     background-color: black;
-    border-bottom-left-radius: 2rem;
-    border-bottom-right-radius: 2rem;
     top: 0;
     z-index: 3;
 }

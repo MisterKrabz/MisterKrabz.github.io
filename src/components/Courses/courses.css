@@ -1,0 +1,63 @@
+.courses-section{
+    padding: 30px 0px; /* Add some top/bottom padding to the section if needed */
+    /* The main background is on the body, or set it here if preferred */
+}
+
+/* Title Styling */
+.courses-title-container {
+    display: inline-block;
+    background-color: red; 
+    padding: 10px 25px;
+    border: 7px solid black;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-left: 40px; /* Indent from the left */
+    position: relative;
+    z-index: 1;
+    margin-bottom: -2px; /* Overlap with the content area's top border */
+}
+
+.courses-title {
+    font-size: 2.2em; /* Adjust as needed */
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+.courses-title .title-icon {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Skills Content Area (below title) */
+.courses-content-area {
+    background-color: red; /* Match body/section background */
+    border-top: 2px solid black; /* Line under the title tab */
+    padding: 100px 100px 100px 100px; /* Padding for the grid container. Top, Right, Bottom, Left */
+}
+
+.courses-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.card{
+    border: 3px solid black;
+    max-width: 30rem;
+    border-radius: 2rem;
+    padding: 1rem;
+    box-shadow: 5px 5px 0px black;
+    margin: 1rem;
+    text-align: center;
+    background-color: #FFD700; 
+    color: black;
+
+}
+
+.card:hover{
+    box-shadow: 10px 10px 0px black;
+    transform: translateY(-5px);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
