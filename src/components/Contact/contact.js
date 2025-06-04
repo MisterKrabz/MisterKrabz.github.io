@@ -7,6 +7,11 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
+    function sendEmail(event) {
+    event.preventDefault(); // Prevents the browser from refreshing the page on form submission since when this happens, the form data is sent to the server and the web page is reloaded but there is no server specified in this case. 
+    // TODO: impliment email sending here, send to pwangsuper@gmail.com
+    alert("Your message has been sent!");
+}
 
     return(
         <section className="contact-section">
@@ -38,10 +43,6 @@ const Contact = () => {
     );
 }
 
-function sendEmail(event) {
-    event.preventDefault(); // Prevents the browser from refreshing the page on form submission since when this happens, the form data is sent to the server and the web page is reloaded but there is no server specified in this case. 
-    // TODO: impliment email sending here, send to pwangsuper@gmail.com
-    alert("Your message has been sent!");
-}
+
 
 export default Contact;

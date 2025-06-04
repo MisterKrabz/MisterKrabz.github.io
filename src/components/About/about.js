@@ -3,10 +3,9 @@ import "./about.css";
 import profilePic from '../../assets/profilePic.jpg';
 
 const About = () => {
-    const [cardSidem, setCardSide] = React.useState("front");
 
     return(
-        <section className="about-section" onclick = {setCardSide()}>
+        <section className="about-section">
             <div className="about-title-container">
                 <h2 className="about-title">
                     &#128100; About </h2>
